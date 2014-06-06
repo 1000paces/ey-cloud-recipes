@@ -28,7 +28,7 @@ if (['solo', 'app', 'util', 'app_master'].include?(node[:instance_role]) && node
         variables({
           :app_name => app_name,
           :user => node[:owner_name],
-          :worker_name => "#{app_name}_delayed_job#{count+1}",
+          :worker_name => "#{app_name}_delayed_job_x#{count+1}",
           :framework_env => node[:environment][:framework_env]
         })
       end
