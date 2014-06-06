@@ -63,7 +63,7 @@ node[:applications].each do |app_name, data|
         mode 0755
       end
  
-      template "/etc/monit.d/delayed_job_worker.#{app_name}.monitrc" do
+      template "/etc/monit.d/dj.#{app_name}.monitrc" do
         source "dj.monitrc.erb"
         owner user[:username]
         group user[:username]
