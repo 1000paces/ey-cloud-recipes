@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 
-if ['solo', 'app', 'util', 'app_master'].include?(node[:instance_role]) && node[:name] !~ /^(mongodb|redis|memcache)/)
+if (['solo', 'app', 'util', 'app_master'].include?(node[:instance_role]) && node[:name] !~ /^(mongodb|redis|memcache)/)
   node[:applications].each do |app_name,data|
   
     # determine the number of workers to run based on instance size
