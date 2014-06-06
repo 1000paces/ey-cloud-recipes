@@ -2,7 +2,7 @@
 # Cookbook Name:: delayed_job
 # Recipe:: default
 #
-=begin
+
 if ['solo', 'app', 'util', 'app_master'].include?(node[:instance_role]) && node[:name] !~ /^(mongodb|redis|memcache)/)
   node[:applications].each do |app_name,data|
   
@@ -41,8 +41,8 @@ if ['solo', 'app', 'util', 'app_master'].include?(node[:instance_role]) && node[
       
   end
 end
-=end
 
+=begin
 #
 # Cookbook Name:: delayed_job
 # Recipe:: default
@@ -90,3 +90,5 @@ node[:applications].each do |app_name, data|
     end
   end
 end
+
+=end
