@@ -2,7 +2,7 @@
 # Cookbook Name:: delayed_job
 # Recipe:: default
 #
-
+=begin
 if (['solo', 'app', 'util', 'app_master'].include?(node[:instance_role]) && node[:name] !~ /^(mongodb|redis|memcache)/)
   node[:applications].each do |app_name,data|
   
@@ -41,8 +41,8 @@ if (['solo', 'app', 'util', 'app_master'].include?(node[:instance_role]) && node
       
   end
 end
+=end
 
-=begin
 #
 # Cookbook Name:: delayed_job
 # Recipe:: default
@@ -54,7 +54,7 @@ node[:applications].each do |app_name, data|
   case node[:instance_role]
     when "solo", "app", "app_master"
  
-      worker_name = "#{app_name}_job_runner" #safer to make this "#{app_name}_job_runner" if the environment might run multiple apps using delayed_job
+      worker_name = "#{app_name}_dj_runner" #safer to make this "#{app_name}_job_runner" if the environment might run multiple apps using delayed_job
  
       # The symlink is created in /data/app_name/current/tmp/pids -> /data/app_name/shared/pids, but shared/pids doesn't seem to be?
       directory "/data/#{app_name}/shared/pids" do
@@ -90,5 +90,3 @@ node[:applications].each do |app_name, data|
     end
   end
 end
-
-=end
