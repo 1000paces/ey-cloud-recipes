@@ -34,6 +34,9 @@
 #uncomment to run the ssmtp recipe
 include_recipe "ssmtp"
 
+#uncomment to run the delayed_job recipe
+include_recipe "delayed_job"
+
 #uncomment to run the sunspot recipe
 # include_recipe "sunspot"
 
