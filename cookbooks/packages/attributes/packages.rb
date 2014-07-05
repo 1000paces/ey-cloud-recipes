@@ -6,5 +6,4 @@
 #
 # Examples below:
 
-default[:packages] = [{:name => "app-misc/wkhtmltopdf-bin", :version => "0.10.0_beta5"},
-                       {:name => "dev-util/lockrun", :version => "2-r1"}]
+default[:packages] = [{:name => "app-text/pdftk", :version => "1.44"}]

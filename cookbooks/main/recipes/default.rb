@@ -50,7 +50,7 @@ include_recipe "delayed_job"
 
 #uncomment to install specified packages
 # You must add your packages to packages/attributes/packages.rb
-#require_recipe "packages"
+require_recipe "packages"
 
 #uncomment to run the exim::auth recipe
 #include_recipe "exim::auth"
